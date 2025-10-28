@@ -3,13 +3,13 @@ version: '3.9'
 services:
   laravel:
     build:
-      context: ./form-builder
+      context: .
       dockerfile: Dockerfile
     container_name: form-builder-api
     restart: unless-stopped
     working_dir: /var/www/html
     volumes:
-      - ./form-builder:/var/www/html
+      - .:/var/www/html
     networks:
       - app-network
     depends_on:
@@ -44,7 +44,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./form-builder:/var/www/html
+      - .:/var/www/html
       - ./nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - laravel
@@ -60,7 +60,7 @@ volumes:
 
   # react-frontend:
   #   build:
-  #     context: ./form-builder-frontend
+  #     context: .-frontend
   #     dockerfile: Dockerfile
   #   container_name: react-frontend
   #   ports:
