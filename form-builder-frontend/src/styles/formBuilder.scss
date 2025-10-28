@@ -1,0 +1,51 @@
+.form-builder-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.field-list {
+  width: 25%;
+  background: #fafafa;
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.field-item {
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: grab;
+  transition: background 0.3s;
+}
+
+.field-item:hover {
+  background: #f0f5ff;
+}
+
+.drop-zone {
+  width: 75%;
+  min-height: 400px;
+  border: 2px dashed #999;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.drop-zone.active {
+  border-color: #1677ff;
+  background: #e6f7ff;
+}
+
+.dropped-field {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 0.7rem;
+  margin-bottom: 0.7rem;
+  border-radius: 6px;
+}

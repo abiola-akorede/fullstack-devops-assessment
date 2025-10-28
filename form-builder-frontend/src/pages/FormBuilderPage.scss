@@ -1,0 +1,57 @@
+.form-builder-container {
+  padding: 2rem;
+
+  .builder-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+  .left-panel, .right-panel {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .draggable-field {
+    cursor: grab;
+    margin-bottom: 1rem;
+  }
+
+  .dropzone {
+    transition: background-color 0.3s;
+  }
+}
+
+
+// .form-builder-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 100vh;
+//   background-color: #f5f6fa;
+// }
+
+// .form-builder-card {
+//   width: 600px;
+//   padding: 24px;
+//   background: white;
+// }
+
+// .field-item {
+//   display: flex;
+//   flex-direction: column;
+//   margin-bottom: 12px;
+
+//   label {
+//     font-weight: 500;
+//     margin-bottom: 6px;
+//   }
+
+//   input {
+//     padding: 8px;
+//     border: 1px solid #ccc;
+//     border-radius: 6px;
+//   }
+// }
