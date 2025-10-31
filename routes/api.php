@@ -23,6 +23,9 @@ Route::post('/register', [\App\Http\Controllers\AuthController::class, 'register
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [\App\Http\Controllers\AuthController::class, 'logout']);
-    Route::get('/forms', [\App\Http\Controllers\FormController::class, 'allForms']);
-    Route::post('/createforms', [\App\Http\Controllers\FormController::class, 'storeForm']);
+    Route::get('/forms', [\App\Http\Controllers\FormController::class, 'allForms']);        // get all forms
+    Route::post('/createforms', [\App\Http\Controllers\FormController::class, 'storeForm']);        // create a new form
+    Route::get('/forms/{id}', [\App\Http\Controllers\FormController::class, 'getForm']);          // get a specific form
+    Route::put('/forms/{id}', [\App\Http\Controllers\FormController::class, 'updateForm']);       // update a specific form
+    Route::delete('/forms/{id}', [\App\Http\Controllers\FormController::class, 'deleteForm']);     // delete a specific form 
 });
